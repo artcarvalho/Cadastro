@@ -1,4 +1,4 @@
-package projeto.primeiro.Cadastro;
+package projeto.primeiro.Cadastro.Cliente;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;

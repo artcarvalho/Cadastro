@@ -1,4 +1,4 @@
-package projeto.primeiro.Cadastro;
+package projeto.primeiro.Cadastro.Cliente;
 import jakarta.persistence.*;
 
 import java.util.Date;
