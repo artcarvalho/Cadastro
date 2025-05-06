@@ -12,10 +12,18 @@ public class CarrosModel {
     private Long id;
 
     private String modelo;
+
     private String marca;
+
     private Float km_rodado;
+
     private Float preco_aluguel;
+
+    //Um carro tem um unico locatário -> @ManyToOne
+    @ManyToOne
+    @JoinColumn(name = "cliente_id") // chave estrangeira -> Foreing Key
     private ClienteModel locatario;
+
 
     public CarrosModel(){
 

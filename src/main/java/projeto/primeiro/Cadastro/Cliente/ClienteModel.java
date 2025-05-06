@@ -1,11 +1,11 @@
 package projeto.primeiro.Cadastro.Cliente;
 import jakarta.persistence.*;
+import projeto.primeiro.Cadastro.Carros.CarrosModel;
 
 import java.util.Date;
+import java.util.List;
 
-//@ <- annotation, dá atributos especiais para variaveis, classes, interfaces ou outros elementos.
 
-// Entity Transforma uma classe em uma entidade de um BD
 @Entity
 @Table(name = "tb_cadastro")
 public class ClienteModel {
@@ -16,8 +16,13 @@ public class ClienteModel {
     private Long id;
 
     private String nome;
+
     private Date data_nascimento;
+
     private String email;
+
+    @OneToMany(mappedBy = "locatario") //Um locatário pode ter varios carros alugados
+    private List<CarrosModel> carros_alugados;
 
     //construtores
     public ClienteModel(){
